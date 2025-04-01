@@ -1,0 +1,25 @@
+  debug: true
+  logout: "stdout"
+  salt: "hamster.encrypt.salt"
+  mysql:
+    endpoint: "root:10086@tcp(localhost:3306)/hamster?parseTime=true"
+  redis:
+    endpoint: "redis://127.0.0.1:6379/0?dial_timeout=1&read_timeout=1s&max_retries=5&min_retry_backoff=100ms"
+  messager:
+    base:
+      url: "https://api.telegram.org/密钥/sendMessage"
+      chat_id: 0
+      keyword: "Hamster"
+    warn: 
+      url: "https://api.telegram.org/密钥/sendMessage"
+      chat_id: 0
+      keyword: "Hamster"
+  api_server:
+    pprof: "0.0.0.0:8000"
+    serve: "0.0.0.0:9000"
+    request_limit_per_minute: 60
+    allow_origins: "http://127.0.0.1:9000,https://example.app,https://*.example.app"
+    signature_private_key: "签名密钥"
+  settle_server:
+    pprof: "0.0.0.0:8001"
+      
